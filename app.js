@@ -33,13 +33,13 @@ passport.use(new LocalStrategy(User.authenticate()));
 
 //APP ROUTES
 app.get("/", function(req, res){
-    //INCLUDE FRONTEND
+    res.json({"page": "home"});
 });
 
 
 //show signup from
 app.get("/register", function(req, res){
-    //INCLUDE FRONTEND
+    res.json({"message": "Enter deets"});
 });
 
 app.post("/register", function(req, res){
@@ -48,10 +48,10 @@ app.post("/register", function(req, res){
     User.register(new User({username: req.body.username}), req.body.password, function (err, user){
         if (err) {
             console.log(err);
-            //INCLUDE REGISTER FROM
+            res.json({"sucess": err});
         } else {
             passport.authenticate("local")(req, res, function(){
-                //REDIRECT 
+                res.json({"sucess": "registered"})
             });
         }
     })
@@ -60,7 +60,7 @@ app.post("/register", function(req, res){
 //login routes
 
 app.get("/login", function(req, res){
-    //INCLUDE FRONTEND FOR LOGIN
+    res.json({"message": "Enter login details"});
 });
 
 
@@ -72,6 +72,7 @@ app.post("/login", passport.authenticate("local",{
 
 app.get("/logout", function(req, res){
     req.logout();
+    res.json({"message":"logged out"})
     res.redirect("/");
 });
 
