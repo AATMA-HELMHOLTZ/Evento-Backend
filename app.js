@@ -18,7 +18,7 @@ app.use(require("express-session")({
 }));
 
 
-mongoose.connect('mongodb://localhost:27017/demo_auth_v1', {
+mongoose.connect('mongodb+srv://tejas12345:tejas12345@cluster0.cqxmw.gcp.mongodb.net/demo_auth_v1?retryWrites=true&w=majority', {
     useNewUrlParser: true, 
     useUnifiedTopology: true
 })
@@ -50,6 +50,7 @@ app.post("/register", function(req, res){
             console.log(err);
             res.json({"sucess": err});
         } else {
+            console.log(user);
             passport.authenticate("local")(req, res, function(){
                 res.json({"sucess": "registered"})
             });
