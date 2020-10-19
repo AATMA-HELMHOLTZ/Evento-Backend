@@ -1,18 +1,23 @@
 const express = require('express');
 const router = new express.Router();
-const passport = require("passport");
-// const LocalStrategy = require("passport-local");
+const {check} = require('express-validator');
+const User = require("../models/user");
 
-const userControllers = require("../controllers/user-controllers");
+// const passport = require("passport");
+// // const LocalStrategy = require("passport-local");
 
-router.post("/register", userControllers.registerUser);
+const userController = require("../controllers/user-controllers");
 
-// here controller was not defined
-router.post("/login", passport.authenticate("local", {
-    successRedirect: "/",
-    failureRedirect: "/login"
-}), () =>{});
+router.post('/signup', [
+    check('email')
+        .normalizeEmail()
+        .isEmail(),
+    check('password').isLength({min: 6}),
+], userController.signUp(User));
 
-router.get("/logout", userControllers.logoutUser);
+
+
+
+
 
 module.exports = router;

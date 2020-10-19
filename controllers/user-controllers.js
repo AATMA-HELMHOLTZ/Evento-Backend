@@ -1,29 +1,66 @@
+const bcrypt = require("bcryptjs");
+const jwt = require('jsonwebtoken');
+
 const User = require("../models/user");
-const passport = require("passport");
-const LocalStrategy = require("passport-local");
+const RequestError = require("../models/request-error");
 
 
-const registerUser = async (req, res, next) => {
-    // req.body.username
-    // req.body.password
-    User.register(new User({username: req.body.username}), req.body.password, function (err, user) {
-        if (err) {
-            console.log(err);
-            res.json({"sucess": err});
-        } else {
-            console.log(user);
-            passport.authenticate("local")(req, res, function () {
-                res.json({"sucess": "registered"})
-            });
-        }
-    })
+const signUp = async (req,res,next,User) => {
+
+    const { email, password} = req.body;
+    let existingUser;
+    try {
+        existingUser = await dbType.findOne({email: email});
+    } catch (err) {
+        const error = new RequestError("Error querying database", 500, err);
+        return next(error);
+    }
+    if (existingUser) {
+        const error = new RequestError('User exists already, please login instead.',422);
+        return next(error);
+    }
+
+    let hashedPassword;
+    try {
+        hashedPassword = await bcrypt.hash(password, 12);
+    } catch (err) {
+        const error = new RequestError('Could not create user, please try again.', 500, err);
+        return next(error);
+    }
+
+    const createdUser = new User({
+        firstName,
+        lastName,
+        email,
+        // image: 'https://win75.herokuapp.com/' + filePath,
+        password: hashedPassword,
+        mobile,
+        university,
+        joinDate: date,
+    });
+    let token;
+    try {
+        token = jwt.sign(
+            {userId: createdUser.id, email: createdUser.email},
+            process.env.Jwt_Key,{
+                expiresIn: '2d' // expires in 2d
+            }
+        );
+    } catch (err) {
+        const error = new RequestError('Signing up failed, please try again later.', 500, err);
+        return next(error);
+    }
+
+    await res
+        .status(201)
+        .json({"status":"success",user: createdUser, email: createdUser.email, token: token});
+
 }
 
-const logoutUser = async (req, res) => {
-    req.logout();
-    res.json({"message": "logged out"})
-    // res.redirect("/");
-}
 
-exports.registerUser = registerUser;
-exports.logoutUser = logoutUser;
+
+
+
+exports.signUp= signUp;
+
+
