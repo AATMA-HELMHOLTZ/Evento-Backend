@@ -1,0 +1,5 @@
+USER { name, email, password, mobile, city, prevOrders: [ref of ORDER] }
+ORDER { estimatePrice, vendorSelected: [ref to VENDOR], dateOfOrder }
+EVENT { nameOfEvent, image, servicesOffered: [ref to SERVICE] }
+SERVICE { type, listOfVendors: [ref to VENDOR], displayImage }
+VENDOR { name , minPrice, image, email, phone, review, rating, city, password }

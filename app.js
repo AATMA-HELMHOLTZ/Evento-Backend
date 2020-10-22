@@ -1,4 +1,7 @@
+require('dotenv').config();
+
 // External lib imports
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -23,12 +26,16 @@ const RequestError = require('./models/request-error');
 // -------------SERVER INITIALISE-----------------
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.json());
+
 app.use(express.static(__dirname + "/public"));
 
 
 //------------------SETUP ROUTES----------------
 
-app.use('/api/v1/user',userRoutes);
+app.use('/api/v1/user',userRoutes,()=>{
+    console.log('in here')
+});
 
 //   UNSUPPORTED ROUTES
 app.use((req, res, next) => {
@@ -64,6 +71,6 @@ mongoose.connect(process.env.DB_URL, {
         console.log("connected to db")
     })
 })
-    .catch(() => console.log(error.message,"error while connecting to db"));
+    .catch((error) => console.log(error.message,"error while connecting to db"));
 
 
