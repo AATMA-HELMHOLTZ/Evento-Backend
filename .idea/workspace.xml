@@ -35,15 +35,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/models.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/user-controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user-controllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodemon.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user-routes.js" afterDir="false" />
-    </list>
+    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="Completed User SignUp" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,8 +79,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1603397595823</updated>
-      <workItem from="1603397597642" duration="9349000" />
+      <workItem from="1603397597642" duration="9701000" />
     </task>
+    <task id="LOCAL-00001" summary="Completed User SignUp">
+      <created>1603407748097</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603407748097</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Completed User SignUp">
+      <created>1603407764272</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603407764272</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,6 +111,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Completed User SignUp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed User SignUp" />
   </component>
   <component name="WindowStateProjectService">
     <state x="541" y="231" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603405917184">
@@ -138,6 +149,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="135" y="88" width="981" height="707" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603400571402" />
+    <state x="360" y="162" key="Vcs.Push.Dialog.v2" timestamp="1603407771201">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="360" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1603407771201" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1603405993887">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
