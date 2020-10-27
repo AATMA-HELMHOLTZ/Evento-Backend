@@ -30,6 +30,10 @@ router.post('/login', [
 
 ], userController.login);
 
+// router.post('/forgotPassword', [
+//     check('email').not().isEmpty()
+// ], userController.forgotPassword);
+
 
 
 

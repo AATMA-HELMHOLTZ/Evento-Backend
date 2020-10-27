@@ -35,9 +35,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="added validation and existing user check">
+    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="added login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/user-controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user-controllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/order.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/user-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user-routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +59,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hultprizeindia-backend" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -86,7 +86,8 @@
       <workItem from="1603397597642" duration="9998000" />
       <workItem from="1603708932954" duration="5565000" />
       <workItem from="1603750065770" duration="5702000" />
-      <workItem from="1603790333435" duration="4898000" />
+      <workItem from="1603790333435" duration="11148000" />
+      <workItem from="1603833381465" duration="354000" />
     </task>
     <task id="LOCAL-00001" summary="Completed User SignUp">
       <created>1603407748097</created>
@@ -116,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603793645489</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added login">
+      <created>1603795316279</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603795316279</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -138,7 +146,8 @@
     <MESSAGE value="Completed User SignUp" />
     <MESSAGE value="added response" />
     <MESSAGE value="added validation and existing user check" />
-    <option name="LAST_COMMIT_MESSAGE" value="added validation and existing user check" />
+    <MESSAGE value="added login" />
+    <option name="LAST_COMMIT_MESSAGE" value="added login" />
   </component>
   <component name="WindowStateProjectService">
     <state x="541" y="231" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603405917184">
