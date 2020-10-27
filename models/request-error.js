@@ -6,13 +6,13 @@ class RequestError extends Error {
         // If err is passed, it will be logged on the console
         if (err) {
             console.log("\n")
-            const currentdate = new Date(); 
+            const currentdate = new Date();
             const datetime = currentdate.getDate() + "/"
-                            + (currentdate.getMonth()+1)  + "/" 
-                            + currentdate.getFullYear() + " @ "  
-                            + currentdate.getHours() + ":"  
-                            + currentdate.getMinutes() + ":" 
-                            + currentdate.getSeconds();
+                + (currentdate.getMonth() + 1) + "/"
+                + currentdate.getFullYear() + " @ "
+                + currentdate.getHours() + ":"
+                + currentdate.getMinutes() + ":"
+                + currentdate.getSeconds();
             console.log(`The following error occured on ${datetime}:`);
             console.log(err);
             console.log("\n")

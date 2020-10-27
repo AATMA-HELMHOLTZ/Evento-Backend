@@ -11,13 +11,18 @@ const userController = require("../controllers/user-controllers");
 
 //    /api/v1/user/signup
 
-router.post('/signup', [
+router.post('/signup'
+    , [
     check('email')
-        .normalizeEmail()
+
         .isEmail(),
     check('password').isLength({min: 6}),
-], userController.signUp
+]
+    , userController.signUp
 );
+
+
+router.post('/login',)
 
 
 

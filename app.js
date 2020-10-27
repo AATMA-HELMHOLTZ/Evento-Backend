@@ -39,6 +39,7 @@ app.use('/api/v1/user',userRoutes,()=>{
 
 //   UNSUPPORTED ROUTES
 app.use((req, res, next) => {
+    // console.log(req)
     throw new RequestError('Could not find this route.', 404);
 });
 
