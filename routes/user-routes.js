@@ -22,7 +22,13 @@ router.post('/signup'
 );
 
 
-router.post('/login',)
+router.post('/login', [
+    check('email')
+        .not()
+        .isEmpty(),
+    check('password').isLength({min: 6}),
+
+], userController.login);
 
 
 
