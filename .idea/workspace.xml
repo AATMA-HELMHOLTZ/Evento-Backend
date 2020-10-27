@@ -35,8 +35,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="added Order model">
-      <change afterPath="$PROJECT_DIR$/models/event-type.js" afterDir="false" />
+    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="added event-type model">
+      <change afterPath="$PROJECT_DIR$/models/service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,7 @@
       <workItem from="1603708932954" duration="5565000" />
       <workItem from="1603750065770" duration="5702000" />
       <workItem from="1603790333435" duration="11148000" />
-      <workItem from="1603833381465" duration="665000" />
+      <workItem from="1603833381465" duration="982000" />
     </task>
     <task id="LOCAL-00001" summary="Completed User SignUp">
       <created>1603407748097</created>
@@ -129,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603833849883</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added event-type model">
+      <created>1603834138869</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603834138869</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +160,8 @@
     <MESSAGE value="added validation and existing user check" />
     <MESSAGE value="added login" />
     <MESSAGE value="added Order model" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Order model" />
+    <MESSAGE value="added event-type model" />
+    <option name="LAST_COMMIT_MESSAGE" value="added event-type model" />
   </component>
   <component name="WindowStateProjectService">
     <state x="541" y="231" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603405917184">
