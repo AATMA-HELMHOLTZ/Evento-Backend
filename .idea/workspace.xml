@@ -35,8 +35,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="added event-type model">
-      <change afterPath="$PROJECT_DIR$/models/service.js" afterDir="false" />
+    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="added vendor model">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/user-controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user-controllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/event-type.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/event-type.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/request-error.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/request-error.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/service.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/vendor.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,11 +65,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hultprizeindia-backend" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mohan\OneDrive\Desktop\Evento-Backend\middlewares" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/app.js" working-dir="$PROJECT_DIR$">
@@ -85,7 +98,13 @@
       <workItem from="1603708932954" duration="5565000" />
       <workItem from="1603750065770" duration="5702000" />
       <workItem from="1603790333435" duration="11148000" />
-      <workItem from="1603833381465" duration="982000" />
+      <workItem from="1603833381465" duration="2674000" />
+      <workItem from="1603864356580" duration="601000" />
+      <workItem from="1603950545631" duration="5052000" />
+      <workItem from="1604005836566" duration="755000" />
+      <workItem from="1604145365642" duration="833000" />
+      <workItem from="1604308436145" duration="1064000" />
+      <workItem from="1604406764681" duration="2170000" />
     </task>
     <task id="LOCAL-00001" summary="Completed User SignUp">
       <created>1603407748097</created>
@@ -136,7 +155,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603834138869</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added services model">
+      <created>1603834409329</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1603834409329</updated>
+    </task>
+    <task id="LOCAL-00009" summary="added vendor model">
+      <created>1603834671657</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1603834671657</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,7 +194,9 @@
     <MESSAGE value="added login" />
     <MESSAGE value="added Order model" />
     <MESSAGE value="added event-type model" />
-    <option name="LAST_COMMIT_MESSAGE" value="added event-type model" />
+    <MESSAGE value="added services model" />
+    <MESSAGE value="added vendor model" />
+    <option name="LAST_COMMIT_MESSAGE" value="added vendor model" />
   </component>
   <component name="WindowStateProjectService">
     <state x="541" y="231" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603405917184">
@@ -172,10 +207,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="498" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1603406331333" />
-    <state x="548" y="186" key="FileChooserDialogImpl" timestamp="1603793889587">
+    <state x="548" y="186" key="FileChooserDialogImpl" timestamp="1604406789995">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="548" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1603793889587" />
+    <state x="548" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604406789995" />
     <state width="1515" height="223" key="GridCell.Tab.0.bottom" timestamp="1603400899757">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -196,10 +231,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="135" y="88" width="981" height="707" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603400571402" />
-    <state x="360" y="162" key="Vcs.Push.Dialog.v2" timestamp="1603793648359">
+    <state x="360" y="162" key="Vcs.Push.Dialog.v2" timestamp="1603834688351">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="360" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1603793648359" />
+    <state x="360" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1603834688351" />
     <state x="425" y="197" key="run.anything.popup" timestamp="1603405993887">
       <screen x="0" y="0" width="1536" height="864" />
     </state>

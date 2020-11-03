@@ -5,9 +5,7 @@ const uniqueValidator = require('mongoose-unique-validator');
 const EventSchema = new mongoose.Schema({
     nameOfEvent: {type: String,required: true},
     image: {type: String,},
-    servicesOffered: [],
-
-
+    servicesOffered: [{type: mongoose.Types.ObjectId, ref: 'Service'}]
 
 })
 

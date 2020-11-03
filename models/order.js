@@ -12,4 +12,4 @@ const OrderSchema = new mongoose.Schema({
 
 UserSchema.plugin(uniqueValidator);
 
-module.exports = mongoose.model("User", OrderSchema);
+module.exports = mongoose.model("Order", OrderSchema);

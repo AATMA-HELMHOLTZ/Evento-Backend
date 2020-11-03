@@ -19,7 +19,7 @@ const userRoutes = require('./routes/user-routes');
 
 
 // Custom Libraries
-const RequestError = require('./models/request-error');
+const RequestError = require('./middlewares/request-error');
 
 
 
