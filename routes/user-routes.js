@@ -9,8 +9,11 @@ const {check} = require('express-validator');
 const userController = require("../controllers/user-controllers");
 
 
-//    /api/v1/user/signup
+router.get('/get/all', userController.getUsers);
 
+router.get('/get/:userId', userController.getUserById);
+
+//    /api/v1/user/signup
 router.post('/signup'
     , [
     check('email')

@@ -7,6 +7,47 @@ const RequestError = require("../middlewares/request-error");
 
 const validationResult = require("express-validator").validationResult;
 
+//To get all users
+const getUsers = async (req,res,next) =>{
+    let Users;
+    try {
+        Users = await User.find();
+    } catch (err) {
+        const error = new RequestError('Fetching users failed, please try again later.', 500, err);
+        return next(error);
+    }
+    await res.json(
+        {
+            "status":"success",
+            "Users": Users.map(User => User.toObject({getters: true}))
+        }
+        );
+}
+
+
+//To get details of a particular user
+const getUserById = async (req, res, next) => {
+    const userId = req.params.userId;
+    let user;
+    try {
+        user = await User.findById(userId)
+    } catch (err) {
+        const error = new RequestError("Something went wrong can't get user.", 500, err);
+        return next(error);
+    }
+    if (!user) {
+        const error = new RequestError("Can't find user for provided id", 404);
+        return next(error);
+    }
+    res.status(200).json({
+        "status":"success",
+        admin: user.toObject(
+            {getters: true}
+        )
+    });
+};
+
+
 // Sign Up
 const signUp = async (req, res, next) => {
     const errors = validationResult(req);
@@ -20,7 +61,7 @@ const signUp = async (req, res, next) => {
             new RequestError(params, 422)
         );
     }
-    const {email, password} = req.body;
+    const {name,email, password,mobile,city} = req.body;
     let existingUser;
     try {
         existingUser = await User.findOne({email: email});
@@ -47,9 +88,12 @@ const signUp = async (req, res, next) => {
     }
 
     const createdUser = new User({
+        name,
         email,
         // image: 'https://win75.herokuapp.com/' + filePath,
-        password: hashedPassword
+        password: hashedPassword,
+        mobile,
+        city
     });
 
     await createdUser.save();
@@ -155,6 +199,8 @@ const login = async (req, res, next) => {
     });
 };
 
+exports.getUserById = getUserById;
+exports.getUsers = getUsers;
 exports.login = login;
 exports.signUp = signUp;
 
