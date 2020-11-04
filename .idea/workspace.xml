@@ -35,10 +35,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="added vendor model">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middlewares/request-error.js" beforeDir="false" afterPath="$PROJECT_DIR$/middlewares/request-error.js" afterDir="false" />
-    </list>
+    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="added vendor model" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -100,7 +97,7 @@
       <workItem from="1604406764681" duration="2170000" />
       <workItem from="1604436398799" duration="5501000" />
       <workItem from="1604442031760" duration="4348000" />
-      <workItem from="1604476961744" duration="1244000" />
+      <workItem from="1604476961744" duration="1542000" />
     </task>
     <task id="LOCAL-00001" summary="Completed User SignUp">
       <created>1603407748097</created>

@@ -67,8 +67,8 @@ mongoose.connect(process.env.DB_URL, {
     useUnifiedTopology: true
 })
     .then(() => {
-        app.listen(process.env.port||process.env.SV_PORT, function () {
-        console.log("Started server on",process.env.port||process.env.SV_PORT);
+        app.listen(process.env.PORT||process.env.SV_PORT, function () {
+        console.log("Started server on",process.env.PORT||process.env.SV_PORT);
         console.log("connected to db")
     })
 })
