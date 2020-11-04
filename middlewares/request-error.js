@@ -14,7 +14,8 @@ class RequestError extends Error {
                 + currentdate.getMinutes() + ":"
                 + currentdate.getSeconds();
             console.log(`The following error occured on ${datetime}:`);
-            console.log(err);
+            console.log(err.reason);
+            console.log("error catched");
             console.log("\n")
         }
     }
