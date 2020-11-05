@@ -35,7 +35,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="added vendor model" />
+    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="added vendor model">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -55,7 +58,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hultprizeindia-backend" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -97,7 +100,8 @@
       <workItem from="1604406764681" duration="2170000" />
       <workItem from="1604436398799" duration="5501000" />
       <workItem from="1604442031760" duration="4348000" />
-      <workItem from="1604476961744" duration="1542000" />
+      <workItem from="1604476961744" duration="2337000" />
+      <workItem from="1604562692402" duration="3748000" />
     </task>
     <task id="LOCAL-00001" summary="Completed User SignUp">
       <created>1603407748097</created>
@@ -200,10 +204,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="498" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.864@0.0.1536.864" timestamp="1603406331333" />
-    <state x="548" y="186" key="FileChooserDialogImpl" timestamp="1604438720391">
+    <state x="548" y="186" key="FileChooserDialogImpl" timestamp="1604564585718">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="548" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604438720391" />
+    <state x="548" y="186" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1604564585718" />
     <state width="1515" height="223" key="GridCell.Tab.0.bottom" timestamp="1603400899757">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -232,9 +236,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1603405993887" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1604439491195">
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1604600248042">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1604439491195" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1604600248042" />
   </component>
 </project>

@@ -34,7 +34,7 @@ app.use(express.static(__dirname + "/public"));
 //------------------SETUP ROUTES----------------
 
 app.use('/api/v1/user',userRoutes,()=>{
-    console.log('in app.js')
+
 });
 
 //   UNSUPPORTED ROUTES

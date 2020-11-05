@@ -186,6 +186,7 @@ const login = async (req, res, next) => {
             'Logging in failed, please try again later.',
             500
         );
+        console.log(err);
         return next(error);
     }
 
