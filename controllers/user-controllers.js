@@ -200,6 +200,62 @@ const login = async (req, res, next) => {
     });
 };
 
+const editUser = async (req, res, next) => {
+    const userId = req.userData.userId;
+    let user;
+    try{
+        user = await User.findById(userId);
+    }catch (err){
+        const error = new RequestError("Something went wrong, can't get the user",500)
+        next(error);
+    }
+    if (!user){
+        const error = new RequestError("Can't find user for provided id",404);
+        next(error);
+    }
+    const errors = validationResult(req);
+
+    if (!errors.isEmpty()){
+        return next(
+            new RequestError('Invalid inputs passed, please check your data.',422)
+        );
+    }
+
+    const {name,email,mobile,city}= req.body;
+
+    // let filePath;
+    // try {
+    //     if (req.file) {
+    //         filePath = req.file.path;
+    //     } else {
+    //         filePath = 'uploads/images/DUser.jpeg'
+    //     }
+    // } catch (err) {
+    //     const error = new RequestError(err.message + "olol", err.code);
+    //     return next(error);
+    // }
+    user.name = name;
+    user.email = email;
+    user.mobile = mobile;
+    user.city = city;
+    // user.image = 'http://localhost:5000/' + filePath;
+    try {
+        await user.save();
+    } catch (err) {
+        const error = new RequestError(
+            err.message,
+            500
+        );
+        return next(error);
+    }
+    res.status(200).json({
+        user: user.toObject(
+            {getters: true})
+    });
+
+}
+
+exports.editUser = editUser;
 exports.getUserById = getUserById;
 exports.getUsers = getUsers;
 exports.login = login;

@@ -1,6 +1,7 @@
 const express = require('express');
 const router = new express.Router();
 const {check} = require('express-validator');
+const checkAuth = require('../middlewares/check-auth');
 // const User = require("../models/user");
 
 // const passport = require("passport");
@@ -12,6 +13,8 @@ const userController = require("../controllers/user-controllers");
 router.get('/get/all', userController.getUsers);
 
 router.get('/get/:userId', userController.getUserById);
+
+router.patch('/patch/editProfile',checkAuth, userController.editUser);
 
 //    /api/v1/user/signup
 router.post('/signup'
