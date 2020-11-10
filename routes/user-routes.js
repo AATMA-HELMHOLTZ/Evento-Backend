@@ -14,6 +14,7 @@ router.get('/get/all', userController.getUsers);
 
 router.get('/get/:userId', userController.getUserById);
 
+
 router.patch('/patch/editProfile',checkAuth, userController.editUser);
 
 //    /api/v1/user/signup
