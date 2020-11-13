@@ -5,10 +5,10 @@ const uniqueValidator = require('mongoose-unique-validator');
 const EventSchema = new mongoose.Schema({
     nameOfEvent: {type: String,required: true},
     image: {type: String,},
-    servicesOffered: [{type: mongoose.Types.ObjectId, ref: 'Service'}]
+    servicesOffered: [{type: String}]
 
 })
 
-UserSchema.plugin(uniqueValidator);
+EventSchema.plugin(uniqueValidator);
 
-module.exports = mongoose.model("User", EventSchema);
+module.exports = mongoose.model("Event", EventSchema);

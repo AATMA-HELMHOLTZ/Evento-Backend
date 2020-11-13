@@ -10,6 +10,6 @@ const serviceSchema = new mongoose.Schema({
 
 })
 
-UserSchema.plugin(uniqueValidator);
+serviceSchema.plugin(uniqueValidator);
 
 module.exports = mongoose.model("Service", serviceSchema);

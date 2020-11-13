@@ -12,7 +12,7 @@ const UserSchema = new mongoose.Schema({
     password: {type: String, required: true, minlength: 6},
     mobile: {type: Number, required:false, minlength:10 },
     city: {type: String, default:'Delhi'},
-    orders: [{type: mongoose.Types.ObjectId, ref: 'Order'}]
+    orders: [{type: mongoose.Types.ObjectId, ref: 'Service'}]
     // prevOreder: [{ref: order}]
 })
 
