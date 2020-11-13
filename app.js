@@ -15,6 +15,7 @@ const path = require('path');
 
 //routes import
 const userRoutes = require('./routes/user-routes');
+const eventRoutes = require('./routes/events-routes')
 
 
 
@@ -36,6 +37,7 @@ app.use(express.static(__dirname + "/public"));
 app.use('/api/v1/user',userRoutes,()=>{
 
 });
+app.use('/events',eventRoutes)
 
 //   UNSUPPORTED ROUTES
 app.use((req, res, next) => {

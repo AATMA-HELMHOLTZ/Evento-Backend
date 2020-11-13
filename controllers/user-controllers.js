@@ -223,22 +223,22 @@ const editUser = async (req, res, next) => {
 
     const {name,email,mobile,city}= req.body;
 
-    // let filePath;
-    // try {
-    //     if (req.file) {
-    //         filePath = req.file.path;
-    //     } else {
-    //         filePath = 'uploads/images/DUser.jpeg'
-    //     }
-    // } catch (err) {
-    //     const error = new RequestError(err.message + "olol", err.code);
-    //     return next(error);
-    // }
+    let filePath;
+    try {
+        if (req.file) {
+            filePath = req.file.path;
+        } else {
+            filePath = 'uploads/images/DUser.jpeg'
+        }
+    } catch (err) {
+        const error = new RequestError(err.message + "olol", err.code);
+        return next(error);
+    }
     user.name = name;
     user.email = email;
     user.mobile = mobile;
     user.city = city;
-    // user.image = 'http://localhost:5000/' + filePath;
+    user.image = 'http://localhost:5000/' + filePath;
     try {
         await user.save();
     } catch (err) {

@@ -35,10 +35,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="added vendor model">
-      <change afterPath="$PROJECT_DIR$/controllers/event-controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routes/events-routes.js" afterDir="false" />
+    <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="uploads route">
+      <change afterPath="$PROJECT_DIR$/middlewares/image-upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/events/Anniversary.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/event-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/event-controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/user-controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user-controllers.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/event-type.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/event-type.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/service.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/vendor.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/events-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/events-routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/user-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user-routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +70,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Win75-BackEnd" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.2.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
@@ -68,6 +78,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mohan\OneDrive\Desktop\Evento-Backend\uploads\events" />
       <recent name="C:\Users\mohan\OneDrive\Desktop\Evento-Backend\middlewares" />
     </key>
   </component>
@@ -107,6 +118,10 @@
       <workItem from="1604773126439" duration="14350000" />
       <workItem from="1604909285358" duration="910000" />
       <workItem from="1604924222777" duration="5952000" />
+      <workItem from="1605031068732" duration="3561000" />
+      <workItem from="1605102691863" duration="4126000" />
+      <workItem from="1605252010505" duration="1533000" />
+      <workItem from="1605290096407" duration="7050000" />
     </task>
     <task id="LOCAL-00001" summary="Completed User SignUp">
       <created>1603407748097</created>
@@ -171,7 +186,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603834671657</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="uploads route">
+      <created>1605031099687</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1605031099687</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,13 +220,14 @@
     <MESSAGE value="added event-type model" />
     <MESSAGE value="added services model" />
     <MESSAGE value="added vendor model" />
-    <option name="LAST_COMMIT_MESSAGE" value="added vendor model" />
+    <MESSAGE value="uploads route" />
+    <option name="LAST_COMMIT_MESSAGE" value="uploads route" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="541" y="231" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603405917184">
+    <state x="541" y="231" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1605104762883">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="541" y="231" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1603405917184" />
+    <state x="541" y="231" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.864@0.0.1536.864" timestamp="1605104762883" />
     <state x="498" y="178" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603406331333">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -233,17 +256,17 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="135" y="88" width="981" height="707" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1603400571402" />
-    <state x="360" y="162" key="Vcs.Push.Dialog.v2" timestamp="1603834688351">
+    <state x="360" y="162" key="Vcs.Push.Dialog.v2" timestamp="1605031106777">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="360" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1603834688351" />
-    <state x="425" y="197" key="run.anything.popup" timestamp="1603405993887">
+    <state x="360" y="162" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1605031106777" />
+    <state x="425" y="197" key="run.anything.popup" timestamp="1605103506490">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1603405993887" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1604899205247">
+    <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1605103506490" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1605290472373">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1604899205247" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1605290472373" />
   </component>
 </project>

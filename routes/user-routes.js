@@ -1,6 +1,13 @@
 const express = require('express');
 const router = new express.Router();
 const {check} = require('express-validator');
+const fileUpload = require('../middlewares/image-upload')
+
+const multer = require('multer')
+const upload = multer({dest: 'uploads/'})
+
+
+
 const checkAuth = require('../middlewares/check-auth');
 // const User = require("../models/user");
 
@@ -15,7 +22,7 @@ router.get('/get/all', userController.getUsers);
 router.get('/get/:userId', userController.getUserById);
 
 
-router.patch('/patch/editProfile',checkAuth, userController.editUser);
+router.patch('/patch/editProfile',checkAuth,upload.single('image'), userController.editUser);
 
 //    /api/v1/user/signup
 router.post('/signup'

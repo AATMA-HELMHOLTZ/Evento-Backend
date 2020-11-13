@@ -6,4 +6,8 @@ const checkAuth = require('../middlewares/check-auth');
 const eventController = require('../controllers/event-controller')
 const userController = require("../controllers/user-controllers");
 
-router.post('/post/event',eventController)
+router.get('/get/addRoot',eventController.addRoot);
+
+
+
+module.exports = router;
