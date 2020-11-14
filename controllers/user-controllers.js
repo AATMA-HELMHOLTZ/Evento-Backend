@@ -27,7 +27,7 @@ const getUsers = async (req,res,next) =>{
 
 //To get details of a particular user
 const getUserById = async (req, res, next) => {
-    const userId = req.params.userId;
+    const userId = req.userData.userId;
     let user;
     try {
         user = await User.findById(userId)
@@ -41,7 +41,7 @@ const getUserById = async (req, res, next) => {
     }
     res.status(200).json({
         "status":"success",
-        admin: user.toObject(
+        data: user.toObject(
             {getters: true}
         )
     });

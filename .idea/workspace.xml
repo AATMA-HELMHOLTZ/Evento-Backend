@@ -36,19 +36,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="uploads route">
-      <change afterPath="$PROJECT_DIR$/middlewares/image-upload.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/events/Anniversary.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/event-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/event-controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/user-controllers.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/user-controllers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/event-type.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/event-type.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/service.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/vendor.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/vendor.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/events-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/events-routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/user-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user-routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +110,8 @@
       <workItem from="1605031068732" duration="3561000" />
       <workItem from="1605102691863" duration="4126000" />
       <workItem from="1605252010505" duration="1533000" />
-      <workItem from="1605290096407" duration="7050000" />
+      <workItem from="1605290096407" duration="7278000" />
+      <workItem from="1605358161728" duration="367000" />
     </task>
     <task id="LOCAL-00001" summary="Completed User SignUp">
       <created>1603407748097</created>
