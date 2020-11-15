@@ -7,7 +7,8 @@ const eventController = require('../controllers/event-controller')
 const userController = require("../controllers/user-controllers");
 
 router.get('/get/addRoot',eventController.addRoot);
+router.get('/get/getEvents',eventController.getEvents);
 
-
+router.delete('/delete/deleteAll',eventController.deleteAll);
 
 module.exports = router;
