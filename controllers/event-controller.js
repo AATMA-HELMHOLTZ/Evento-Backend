@@ -15,12 +15,12 @@ const addRoot = async (req,res,next) => {
 
         new event({
         nameOfEvent: "Anniversary",
-        image: "http://10.0.2.2:5000/uploads/events/venue.jpg",
+        image: "http://10.0.2.2:5000/uploads/events/Anniversary.jpg",
         servicesOffered: ["1","2","3","4","5"]
         }),
         new event({
             nameOfEvent: "Birthday Party",
-            image: "http://10.0.2.2:5000/uploads/events/venue.jpg",
+            image: "http://10.0.2.2:5000/uploads/events/bday.jpg",
             servicesOffered: ["1","2","3","4","5"]
 
         }),
@@ -32,7 +32,7 @@ const addRoot = async (req,res,next) => {
         }),
         new event({
             nameOfEvent: "TedX",
-            image: "http://10.0.2.2:5000/uploads/events/venue.jpg",
+            image: "http://10.0.2.2:5000/uploads/events/tedx.jpg",
             servicesOffered: ["1","2","3","4","5"]
 
         })];
