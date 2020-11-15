@@ -32,7 +32,7 @@ const addRoot = async (req,res,next) => {
         }),
         new event({
             nameOfEvent: "TedX",
-            image: "http://10.0.2.2:5000/uploads/events/tedx.jpg",
+            image: "http://10.0.2.2:5000/uploads/events/tedx.jpeg",
             servicesOffered: ["1","2","3","4","5"]
 
         })];
