@@ -62,8 +62,8 @@ const getEvents = async (req,res,next) =>{
     }
     await res.json(
         {
-            "status":"success",
-            "Users": events.map(event => event.toObject({getters: true}))
+
+            "events": events.map(event => event.toObject({getters: true}))
         }
     );
 }
