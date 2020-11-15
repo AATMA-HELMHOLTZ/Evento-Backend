@@ -33,7 +33,7 @@ app.use(express.static(__dirname + "/public"));
 
 
 //------------------SETUP ROUTES----------------
-
+app.use('/uploads/events',express.static('uploads/events'));
 app.use('/api/v1/user',userRoutes,()=>{
 
 });
