@@ -15,24 +15,24 @@ const addRoot = async (req,res,next) => {
 
         new event({
         nameOfEvent: "Anniversary",
-        image: "http://localhost:5000/uploads/events/Anniversary",
+        image: "http://localhost:5000/uploads/events/Anniversary.jpg",
         servicesOffered: ["1","2","3","4","5"]
         }),
         new event({
             nameOfEvent: "Birthday Party",
-            image: "http://localhost:5000/uploads/events/Anniversary",
+            image: "http://localhost:5000/uploads/events/bday.jpg",
             servicesOffered: ["1","2","3","4","5"]
 
         }),
         new event({
             nameOfEvent: "Wedding",
-            image: "http://localhost:5000/uploads/events/Anniversary",
+            image: "http://localhost:5000/uploads/events/venue.jpg",
             servicesOffered: ["1","2","3","4","5"]
 
         }),
         new event({
             nameOfEvent: "TedX",
-            image: "http://localhost:5000/uploads/events/Anniversary",
+            image: "http://localhost:5000/uploads/events/venue.jpg",
             servicesOffered: ["1","2","3","4","5"]
 
         })];
@@ -52,5 +52,36 @@ const addRoot = async (req,res,next) => {
     const vendorImages = [];
 
 }
+const getEvents = async (req,res,next) =>{
+    let events;
+    try {
+        events = await event.find();
+    } catch (err) {
+        const error = new RequestError('Fetching events failed, please try again later.', 500, err);
+        return next(error);
+    }
+    await res.json(
+        {
+            "status":"success",
+            "Users": events.map(event => event.toObject({getters: true}))
+        }
+    );
+}
+const deleteAll = async (req,res,next) =>{
+    let events;
+    try{
+        events = await event.deleteMany();
+    }catch (err) {
+        const error = new RequestError('Deleting events failed, please try again later.', 500, err);
+        return next(error);
+    }
+    await res.json(
+        {
+            "status":"success"
 
+        }
+    );
+}
+exports.deleteAll = deleteAll;
+exports.getEvents = getEvents;
 exports.addRoot = addRoot;
