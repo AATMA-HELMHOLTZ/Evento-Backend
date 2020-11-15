@@ -61,10 +61,10 @@ const signUp = async (req, res, next) => {
             new RequestError(params, 422)
         );
     }
-    const {name,email, password,mobile,city} = req.body;
+    const {name,username, password,mobile,city} = req.body;
     let existingUser;
     try {
-        existingUser = await User.findOne({email: email});
+        existingUser = await User.findOne({username: username});
     } catch (err) {
         const error = new RequestError("Error querying database", 500, err);
         return next(error);
@@ -77,7 +77,7 @@ const signUp = async (req, res, next) => {
     }
 
     let hashedPassword;
-    // console.log(email)
+    // console.log(username)
     // console.log(password)
     const saltRounds = 12
     try {
@@ -89,7 +89,7 @@ const signUp = async (req, res, next) => {
 
     const createdUser = new User({
         name,
-        email,
+        username,
         // image: 'https://win75.herokuapp.com/' + filePath,
         password: hashedPassword,
         mobile,
@@ -100,7 +100,7 @@ const signUp = async (req, res, next) => {
     let token;
     try {
         token = jwt.sign(
-            {userId: createdUser.id, email: createdUser.email},
+            {userId: createdUser.id, username: createdUser.username},
             process.env.Jwt_Key, {
                 expiresIn: '2d' // expires in 2d
             }
@@ -112,7 +112,7 @@ const signUp = async (req, res, next) => {
 
     await res
         .status(201)
-        .json({"status": "success", user: createdUser, email: createdUser.email, token: token});
+        .json({"status": "success", user: createdUser, username: createdUser.username, token: token});
 
 }
 
@@ -132,11 +132,11 @@ const login = async (req, res, next) => {
         );
     }
 
-    const {email, password} = req.body;
+    const {username, password} = req.body;
     let existingUser;
 
     try {
-        existingUser = await User.findOne({email: email});
+        existingUser = await User.findOne({username: username});
     } catch (err) {
         const error = new RequestError(
             err.message,
@@ -178,7 +178,7 @@ const login = async (req, res, next) => {
     let token;
     try {
         token = jwt.sign(
-            {userId: existingUser.id, email: existingUser.email,},
+            {userId: existingUser.id, username: existingUser.username,},
             process.env.Jwt_Key,
         );
     } catch (err) {
@@ -221,7 +221,7 @@ const editUser = async (req, res, next) => {
         );
     }
 
-    const {name,email,mobile,city}= req.body;
+    const {name,username,mobile,city}= req.body;
 
     let filePath;
     try {
@@ -235,7 +235,7 @@ const editUser = async (req, res, next) => {
         return next(error);
     }
     user.name = name;
-    user.email = email;
+    user.username = username;
     user.mobile = mobile;
     user.city = city;
     user.image = 'http://localhost:5000/' + filePath;
@@ -255,6 +255,22 @@ const editUser = async (req, res, next) => {
 
 }
 
+const deleteUser = async  (req,res,next) => {
+    let user;
+    try{
+        user = User.deleteMany()
+    }catch (err) {
+        const error = new RequestError('Deleting events failed, please try again later.', 500, err);
+        return next(error);
+    }
+
+    await res.json(
+        {
+            "status":"success"
+
+        })
+}
+exports.deleteAll = deleteUser;
 exports.editUser = editUser;
 exports.getUserById = getUserById;
 exports.getUsers = getUsers;

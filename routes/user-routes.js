@@ -23,11 +23,11 @@ router.get('/get',checkAuth, userController.getUserById);
 
 
 router.patch('/patch/editProfile',checkAuth,upload.single('image'), userController.editUser);
-
+router.delete('/delete/deleteUser',userController.deleteAll)
 //    /api/v1/user/signup
 router.post('/signup'
     , [
-    check('email')
+    check('username')
 
         .isEmail(),
     check('password').isLength({min: 6}),
@@ -37,7 +37,7 @@ router.post('/signup'
 
 
 router.post('/login', [
-    check('email')
+    check('username')
         .not()
         .isEmpty(),
     check('password').isLength({min: 6}),
@@ -45,7 +45,7 @@ router.post('/login', [
 ], userController.login);
 
 // router.post('/forgotPassword', [
-//     check('email').not().isEmpty()
+//     check('username').not().isEmpty()
 // ], userController.forgotPassword);
 
 
