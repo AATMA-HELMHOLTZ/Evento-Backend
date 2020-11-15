@@ -19,7 +19,7 @@ const userController = require("../controllers/user-controllers");
 
 router.get('/get/all', userController.getUsers);
 
-router.get('/get/',checkAuth, userController.getUserById);
+router.get('/get',checkAuth, userController.getUserById);
 
 
 router.patch('/patch/editProfile',checkAuth,upload.single('image'), userController.editUser);
