@@ -12,7 +12,8 @@ const UserSchema = new mongoose.Schema({
     password: {type: String, required: true, minlength: 6},
     mobile: {type: Number, required:false, minlength:10 },
     city: {type: String, default:'Delhi'},
-    orders: [{type: mongoose.Types.ObjectId, ref: 'Service'}]
+    orders: {type: Array, default:[]},
+    img: {type: String, default: "https://www.cmcaindia.org/wp-content/uploads/2015/11/default-profile-picture-gmail-2.png"}
     // prevOreder: [{ref: order}]
     //
     // name: {type: String, default:'User'},
