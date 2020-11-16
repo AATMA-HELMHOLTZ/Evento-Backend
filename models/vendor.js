@@ -3,7 +3,7 @@ const uniqueValidator = require('mongoose-unique-validator');
 
 
 const vendorSchema = new mongoose.Schema({
-      name: {type: String} ,
+    name: {type: String} ,
     img: {type: String},
     email: {type: String},
     number: {type:Number},
