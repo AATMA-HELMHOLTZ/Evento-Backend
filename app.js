@@ -15,7 +15,8 @@ const path = require('path');
 
 //routes import
 const userRoutes = require('./routes/user-routes');
-const eventRoutes = require('./routes/events-routes')
+const eventRoutes = require('./routes/events-routes');
+const vendorRoutes = require('./routes/vendor-routes');
 
 
 
@@ -38,6 +39,7 @@ app.use('/api/v1/user',userRoutes,()=>{
 
 });
 app.use('/events',eventRoutes)
+app.use('/vendors',vendorRoutes)
 
 //   UNSUPPORTED ROUTES
 app.use((req, res, next) => {
