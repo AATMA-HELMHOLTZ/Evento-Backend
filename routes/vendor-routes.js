@@ -13,7 +13,7 @@ const vendorController = require('../controllers/vendor-controller');
 
 const checkAuth = require('../middlewares/check-auth');
 
-
+// /vendors/get/photographers
 router.get('/get/photographers',checkAuth,
     (req,res,next)=> {
     vendorController.getVendors(req,res,next,'photographer')
@@ -41,6 +41,8 @@ router.get('/get/bakery',checkAuth,
 
 router.get('/get/vendorById/:vendorId',checkAuth,vendorController.getVendors)
 // router.get('/get/caterer',checkAuth)
+
+router.post('/post/mail/:vendorId',checkAuth,vendorController.sendMail)
 
 
 

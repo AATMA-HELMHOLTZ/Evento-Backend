@@ -7,6 +7,8 @@ const event = require('../models/event-type')
 const service = require('../models/service')
 const Vendor = require('../models/vendor')
 const RequestError = require("../middlewares/request-error");
+const User = require('../models/user');
+const nodemailer = require("nodemailer");
 
 
 const getVendors = async (req,res,next,service)=>{
@@ -41,4 +43,37 @@ const getVendorsById = async  (req,res,next) => {
         }
     )
 }
+
+const sendMail = async (req,res,next) => {
+    const userId = req.userData.userId;
+    const vendorId = req.params._id;
+    const user = await User.findById(userId)
+    const vendor = await Vendor.findById(vendorId)
+    const arr = user["orders"]
+    arr.push(vendor)
+    // console.log(user)
+    user.save()
+    let smtpTransport = await nodemailer.createTransport({
+        service: "FastMail",
+        auth: {
+            user: process.env.EVENTO_EMAIL,
+            pass: process.env.EMAIL_PW
+        }
+    });
+    let mailOptions = {
+        to: vendor.email,
+        from: 'eventowebhelp@fastmail.com',
+        subject: 'Evento Event Enquiry',
+        text: 'You are receiving this because ' + user.name + ' has requested for a callback from the website.\n\n' +
+            'Please find the details of the user below:\n\n' +
+            'Name: '+ user.name + '\nEmail: ' + user.username + '\nMobile Number: ' + user.mobile +
+            '\nThank you for using Evento.',
+    };
+    await smtpTransport.sendMail(mailOptions, function(err) {
+        console.log('mail sent');
+    });
+
+}
+
+exports.sendMail = sendMail;
 exports.getVendors = getVendors;

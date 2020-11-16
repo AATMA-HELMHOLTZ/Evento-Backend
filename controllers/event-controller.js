@@ -16,24 +16,24 @@ const addRoot = async (req,res,next) => {
         new event({
         nameOfEvent: "Anniversary",
         image: "http://10.0.2.2:5000/uploads/events/Anniversary.jpg",
-        servicesOffered: ["1","2","3","4","5"]
+        servicesOffered: ["bakery","caterer","decorator","dj"]
         }),
         new event({
             nameOfEvent: "Birthday Party",
             image: "http://10.0.2.2:5000/uploads/events/bday.jpg",
-            servicesOffered: ["1","2","3","4","5"]
+            servicesOffered: ["bakery","caterer","decorator","band","florist","photographer"]
 
         }),
         new event({
             nameOfEvent: "Wedding",
             image: "http://10.0.2.2:5000/uploads/events/venue.jpg",
-            servicesOffered: ["1","2","3","4","5"]
+            servicesOffered: ["bakery","caterer","decorator","band","florist","photographer"]
 
         }),
         new event({
             nameOfEvent: "TedX",
             image: "http://10.0.2.2:5000/uploads/events/tedx.jpeg",
-            servicesOffered: ["1","2","3","4","5"]
+            servicesOffered: ["hospitality","photographer","decorator"]
 
         })];
     try{
