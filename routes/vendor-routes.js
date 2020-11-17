@@ -42,7 +42,7 @@ router.get('/get/bakery',checkAuth,
 router.get('/get/vendorById/:vendorId',checkAuth,vendorController.getVendors)
 // router.get('/get/caterer',checkAuth)
 
-router.post('/post/mail/:vendorId',checkAuth,vendorController.sendMail);
+router.get('/get/mail/:vendorId',checkAuth,vendorController.sendMail);
 
 router.get('/get/vendorsInCart',checkAuth,vendorController.myCart);
 

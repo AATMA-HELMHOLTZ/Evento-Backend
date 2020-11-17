@@ -46,9 +46,20 @@ const getVendorsById = async  (req,res,next) => {
 
 const sendMail = async (req,res,next) => {
     const userId = req.userData.userId;
-    const vendorId = req.params._id;
-    const user = await User.findById(userId)
-    const vendor = await Vendor.findById(vendorId)
+    const vendorId = req.params.vendorId;
+    console.log(vendorId);
+    let user;
+    let vendor
+    try{
+        user = await User.findById(userId)
+        vendor = await Vendor.findById(vendorId)
+    }catch(err){
+        const error = new RequestError(err,500)
+        res.json({
+            error: error
+        })
+    }
+
     const arr = user["orders"]
     arr.push(vendor)
     // console.log(user)
