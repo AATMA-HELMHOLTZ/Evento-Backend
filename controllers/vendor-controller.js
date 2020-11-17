@@ -75,5 +75,21 @@ const sendMail = async (req,res,next) => {
 
 }
 
+const myCart = async (req,res,next) =>{
+    let userId = req.userData.userId;
+    let user;
+    try{
+        user = await User.findById(userId);
+    }catch(err){
+        const error = new RequestError(err,404)
+        res.json({error: error.message});
+    }
+
+    await res.json({
+        vendorsInCart: user.orders
+    })
+}
+
+exports.myCart = myCart;
 exports.sendMail = sendMail;
 exports.getVendors = getVendors;
