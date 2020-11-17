@@ -73,7 +73,7 @@ const sendMail = async (req,res,next) => {
     });
     let mailOptions = {
         to: vendor.email,
-        from: 'eventowebhelp@fastmail.com',
+        from: process.env.EVENTO_EMAIL,
         subject: 'Evento Event Enquiry',
         text: 'You are receiving this because ' + user.name + ' has requested for a callback from the website.\n\n' +
             'Please find the details of the user below:\n\n' +

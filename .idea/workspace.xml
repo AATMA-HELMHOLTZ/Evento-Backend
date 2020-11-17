@@ -37,8 +37,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="uploads route">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/vendor-controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/vendor-controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/vendor-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/vendor-routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,7 @@
       <workItem from="1605290096407" duration="7278000" />
       <workItem from="1605358161728" duration="1032000" />
       <workItem from="1605419998924" duration="35658000" />
-      <workItem from="1605617840086" duration="5557000" />
+      <workItem from="1605617840086" duration="10989000" />
     </task>
     <task id="LOCAL-00001" summary="Completed User SignUp">
       <created>1603407748097</created>
