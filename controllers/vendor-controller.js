@@ -29,7 +29,7 @@ const getVendors = async (req,res,next,service)=>{
 }
 
 const getVendorsById = async  (req,res,next) => {
-    const id=req.params._id;
+    const id=req.params.vendorId;
     let vendor;
     try{
         vendor = await Vendor.findById(id)
@@ -101,6 +101,7 @@ const myCart = async (req,res,next) =>{
     })
 }
 
+exports.getVendorsById = getVendorsById;
 exports.myCart = myCart;
 exports.sendMail = sendMail;
 exports.getVendors = getVendors;

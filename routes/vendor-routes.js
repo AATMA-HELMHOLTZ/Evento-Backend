@@ -39,7 +39,8 @@ router.get('/get/bakery',checkAuth,
     vendorController.getVendors(req,res,next,'bakery')
 });
 
-router.get('/get/vendorById/:vendorId',checkAuth,vendorController.getVendors)
+//Get Vendors by Id
+router.get('/get/vendorById/:vendorId',checkAuth,vendorController.getVendorsById);
 // router.get('/get/caterer',checkAuth)
 
 router.get('/get/mail/:vendorId',checkAuth,vendorController.sendMail);
