@@ -37,6 +37,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="uploads route">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/vendor-routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/vendor-routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +112,8 @@
       <workItem from="1605290096407" duration="7278000" />
       <workItem from="1605358161728" duration="1032000" />
       <workItem from="1605419998924" duration="35658000" />
-      <workItem from="1605617840086" duration="10989000" />
+      <workItem from="1605617840086" duration="18009000" />
+      <workItem from="1605714175100" duration="2510000" />
     </task>
     <task id="LOCAL-00001" summary="Completed User SignUp">
       <created>1603407748097</created>
@@ -254,9 +256,9 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1605103506490" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1605618704977">
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1605722891534">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1605618704977" />
+    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1605722891534" />
   </component>
 </project>

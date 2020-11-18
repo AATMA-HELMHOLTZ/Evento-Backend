@@ -39,6 +39,21 @@ router.get('/get/bakery',checkAuth,
     vendorController.getVendors(req,res,next,'bakery')
 });
 
+router.get('/get/dj',checkAuth,
+    (req,res,next)=>{
+    vendorController.getVendors(req,res,next,'dj')
+    })
+
+router.get('/get/band',checkAuth,
+    (req,res,next)=>{
+        vendorController.getVendors(req,res,next,'band')
+    })
+
+router.get('/get/hospitality',checkAuth,
+    (req,res,next)=>{
+        vendorController.getVendors(req,res,next,'hospitality')
+    })
+
 //Get Vendors by Id
 router.get('/get/vendorById/:vendorId',checkAuth,vendorController.getVendorsById);
 // router.get('/get/caterer',checkAuth)
