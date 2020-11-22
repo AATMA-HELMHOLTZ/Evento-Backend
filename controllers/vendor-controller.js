@@ -9,6 +9,8 @@ const Vendor = require('../models/vendor')
 const RequestError = require("../middlewares/request-error");
 const User = require('../models/user');
 const nodemailer = require("nodemailer");
+const moment = require("moment")
+
 
 
 const getVendors = async (req,res,next,service)=>{
@@ -61,7 +63,7 @@ const sendMail = async (req,res,next) => {
     }
 
     const arr = user["orders"]
-    arr.push(vendor)
+    arr.push({"vendor":vendor, "date": moment().format("MMMM Do YYYY, h:mm a")})
     // console.log(user)
     user.save()
     let smtpTransport = await nodemailer.createTransport({
@@ -82,6 +84,7 @@ const sendMail = async (req,res,next) => {
     };
     await smtpTransport.sendMail(mailOptions, function(err) {
         console.log('mail sent');
+        res.json({mailSent:"yoss"})
     });
 
 }
@@ -96,9 +99,13 @@ const myCart = async (req,res,next) =>{
         res.json({error: error.message});
     }
 
+    // let Arr = [...user.orders];
+    // console.log(Arr)
+
     await res.json({
         vendorsInCart: user.orders
     })
+    // console.log(Arr.length)
 }
 
 exports.getVendorsById = getVendorsById;
