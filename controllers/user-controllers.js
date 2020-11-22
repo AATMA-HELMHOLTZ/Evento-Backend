@@ -61,7 +61,7 @@ const signUp = async (req, res, next) => {
             new RequestError(params, 422)
         );
     }
-    const {name,username, password,mobile,city} = req.body;
+    const {name,username, appPassword,mobile,city} = req.body;
     // let existingUser;
     // try {
     //     existingUser = await User.findOne({username: username});
@@ -78,10 +78,10 @@ const signUp = async (req, res, next) => {
 
     let hashedPassword;
     // console.log(username)
-    // console.log(password)
+    // console.log(appPassword)
     const saltRounds = 12
     try {
-        hashedPassword = await bcrypt.hash(password, 12);
+        hashedPassword = await bcrypt.hash(appPassword, 12);
     } catch (err) {
         const error = new RequestError('Could not create user, please try again.', 500, err);
         return next(error);
@@ -91,7 +91,7 @@ const signUp = async (req, res, next) => {
         name,
         username,
         // image: 'https://win75.herokuapp.com/' + filePath,
-        password: hashedPassword,
+        appPassword: hashedPassword,
         mobile,
         city
     });
@@ -132,7 +132,7 @@ const login = async (req, res, next) => {
         );
     }
 
-    const {username, password} = req.body;
+    const {username, appPassword} = req.body;
     let existingUser;
 
     try {
@@ -158,7 +158,7 @@ const login = async (req, res, next) => {
 
     let isValidPassword = false;
     try {
-        isValidPassword = await bcrypt.compare(password, existingUser.password);
+        isValidPassword = await bcrypt.compare(appPassword, existingUser.appPassword);
     } catch (err) {
         const error = new RequestError(
             'Could not log you in, please check your credentials and try again.',
@@ -169,7 +169,7 @@ const login = async (req, res, next) => {
 
     if (!isValidPassword) {
         const error = new RequestError(
-            'Incorrect password entered.',
+            'Incorrect appPassword entered.',
             403
         );
         return next(error);
@@ -191,8 +191,8 @@ const login = async (req, res, next) => {
     }
 
     const existingUserObj = existingUser.toObject();
-    // Delete password from local existingUser variable to avoid sending it to the User.
-    delete existingUserObj.password;
+    // Delete appPassword from local existingUser variable to avoid sending it to the User.
+    delete existingUserObj.appPassword;
     await res.json({
         "status": "success",
         "user": existingUserObj,

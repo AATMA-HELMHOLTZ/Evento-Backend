@@ -9,34 +9,11 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
     </expand>
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b03c240-f775-4904-81fb-caeb1f4ab65e" name="Default Changelist" comment="uploads route">
-      <change afterPath="$PROJECT_DIR$/garbage.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,6 +94,7 @@
       <workItem from="1605799773418" duration="2049000" />
       <workItem from="1605865949468" duration="2210000" />
       <workItem from="1605885802808" duration="997000" />
+      <workItem from="1606027953515" duration="1035000" />
     </task>
     <task id="LOCAL-00001" summary="Completed User SignUp">
       <created>1603407748097</created>
@@ -260,9 +238,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="425" y="197" key="run.anything.popup/0.0.1536.864@0.0.1536.864" timestamp="1605103506490" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1605722891534">
+    <state x="431" y="181" width="840" height="678" key="search.everywhere.popup" timestamp="1606028459197">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="431" y="181" width="840" height="678" key="search.everywhere.popup/0.0.1536.864/1920.0.1024.768@0.0.1536.864" timestamp="1606028459197" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1605722891534" />
   </component>
 </project>

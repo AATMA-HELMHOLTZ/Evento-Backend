@@ -9,7 +9,8 @@ const UserSchema = new mongoose.Schema({
         // unique: true,
         // match: /\S+@\S+\.\S+/
     },
-    password: {type: String, required: true, minlength: 6},
+    password: {type: String,required:false, minlength: 6},
+    appPassword: {type: String,required:false, minlength: 6},
     mobile: {type: Number, required:false, minlength:10 },
     city: {type: String, default:'Delhi'},
     orders: {type: Array, default:[]},
