@@ -62,57 +62,90 @@ const signUp = async (req, res, next) => {
         );
     }
     const {name,username, appPassword,mobile,city} = req.body;
-    // let existingUser;
-    // try {
-    //     existingUser = await User.findOne({username: username});
-    // } catch (err) {
-    //     const error = new RequestError("Error querying database", 500, err);
-    //     return next(error);
-    // }
-    // // console.log(existingUser)
-    // if (existingUser) {
-    //     // console.log("in here")
-    //     const error = new RequestError('User exists already, please login instead.', 422);
-    //     return next(error);
-    // }
-
-    let hashedPassword;
-    // console.log(username)
-    // console.log(appPassword)
-    const saltRounds = 12
+    let existingUser;
     try {
-        hashedPassword = await bcrypt.hash(appPassword, 12);
+        existingUser = await User.findOne({username: username});
     } catch (err) {
-        const error = new RequestError('Could not create user, please try again.', 500, err);
+        const error = new RequestError("Error querying database", 500, err);
         return next(error);
     }
-
-    const createdUser = new User({
-        name,
-        username,
-        // image: 'https://win75.herokuapp.com/' + filePath,
-        appPassword: hashedPassword,
-        mobile,
-        city
-    });
-
-    await createdUser.save();
-    let token;
-    try {
-        token = jwt.sign(
-            {userId: createdUser.id, username: createdUser.username},
-            process.env.Jwt_Key, {
-                expiresIn: '2d' // expires in 2d
+    // console.log(existingUser)
+    if (existingUser) {
+        // console.log("in here")
+        let hashedPassword;
+        const saltRounds = 12
+        try {
+            hashedPassword = await bcrypt.hash(appPassword, 12);
+        } catch (err) {
+            const error = new RequestError('Could not create user, please try again.', 500, err);
+            return next(error);
+        }
+        try{
+            existingUser.appPassword = hashedPassword;
+            await existingUser.save();
+            let token;
+            try {
+                token = jwt.sign(
+                    {userId: existingUser.id, username: existingUser.username},
+                    process.env.Jwt_Key, {
+                        expiresIn: '2d' // expires in 2d
+                    }
+                );
+            } catch (err) {
+                const error = new RequestError('Signing up failed, please try again later.', 500, err);
+                return next(error);
             }
-        );
-    } catch (err) {
-        const error = new RequestError('Signing up failed, please try again later.', 500, err);
-        return next(error);
+
+            await res
+                .status(201)
+                .json({"status": "success", user: existingUser, username: existingUser.username, token: token});
+        }catch(err){
+            const error = new RequestError('ajsdhf',500,err);
+            return next(error);
+
+        }
+
+    }
+    else{
+        let hashedPassword;
+        // console.log(username)
+        // console.log(appPassword)
+        const saltRounds = 12
+        try {
+            hashedPassword = await bcrypt.hash(appPassword, 12);
+        } catch (err) {
+            const error = new RequestError('Could not create user, please try again.', 500, err);
+            return next(error);
+        }
+
+        const createdUser = new User({
+            name,
+            username,
+            // image: 'https://win75.herokuapp.com/' + filePath,
+            appPassword: hashedPassword,
+            mobile,
+            city
+        });
+
+        await createdUser.save();
+        let token;
+        try {
+            token = jwt.sign(
+                {userId: createdUser.id, username: createdUser.username},
+                process.env.Jwt_Key, {
+                    expiresIn: '2d' // expires in 2d
+                }
+            );
+        } catch (err) {
+            const error = new RequestError('Signing up failed, please try again later.', 500, err);
+            return next(error);
+        }
+
+        await res
+            .status(201)
+            .json({"status": "success", user: createdUser, username: createdUser.username, token: token});
     }
 
-    await res
-        .status(201)
-        .json({"status": "success", user: createdUser, username: createdUser.username, token: token});
 
 }
 
