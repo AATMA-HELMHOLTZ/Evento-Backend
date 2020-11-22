@@ -62,19 +62,19 @@ const signUp = async (req, res, next) => {
         );
     }
     const {name,username, password,mobile,city} = req.body;
-    let existingUser;
-    try {
-        existingUser = await User.findOne({username: username});
-    } catch (err) {
-        const error = new RequestError("Error querying database", 500, err);
-        return next(error);
-    }
-    // console.log(existingUser)
-    if (existingUser) {
-        // console.log("in here")
-        const error = new RequestError('User exists already, please login instead.', 422);
-        return next(error);
-    }
+    // let existingUser;
+    // try {
+    //     existingUser = await User.findOne({username: username});
+    // } catch (err) {
+    //     const error = new RequestError("Error querying database", 500, err);
+    //     return next(error);
+    // }
+    // // console.log(existingUser)
+    // if (existingUser) {
+    //     // console.log("in here")
+    //     const error = new RequestError('User exists already, please login instead.', 422);
+    //     return next(error);
+    // }
 
     let hashedPassword;
     // console.log(username)
