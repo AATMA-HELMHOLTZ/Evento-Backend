@@ -30,7 +30,7 @@ router.post('/signup'
     check('username')
 
         .isEmail(),
-    check('password').isLength({min: 6}),
+    check('appPassword').isLength({min: 6}),
 ]
     , userController.signUp
 );

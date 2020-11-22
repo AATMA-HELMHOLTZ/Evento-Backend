@@ -71,7 +71,8 @@ const signUp = async (req, res, next) => {
     }
     // console.log(existingUser)
     if (existingUser) {
-        // console.log("in here")
+        console.log("in here")
+        console.log(existingUser)
         let hashedPassword;
         const saltRounds = 12
         try {
