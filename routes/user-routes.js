@@ -40,7 +40,7 @@ router.post('/login', [
     check('username')
         .not()
         .isEmpty(),
-    check('password').isLength({min: 6}),
+    check('appPassword').isLength({min: 6}),
 
 ], userController.login);
 
